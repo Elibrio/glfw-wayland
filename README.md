@@ -1,3 +1,32 @@
+# GLFW-Wayland
+
+This is just a fork of the LWJGL glfw repository which fixes the cursor bug when running Minecraft with the normal library compiled for Wayland
+
+## Building
+
+```bash
+git clone https://github.com/Elibrio/glfw-wayland && cd glfw-wayland
+cmake -B build .
+cd build
+make
+```
+
+After compilation the compiled library can be found under build/src/libglfw.so*
+
+## Usage
+
+You need to set the following JVM argument:
+
+```
+-Dorg.lwjgl.glfw.libname=/your/path/to/libglfw.so.3.5
+```
+
+In PrismLauncher you can go to
+Settings -> Minecraft -> Tweaks -> GLFW
+and provide the path there
+
+---
+
 # GLFW
 
 [![Build status](https://github.com/glfw/glfw/actions/workflows/build.yml/badge.svg)](https://github.com/glfw/glfw/actions)
